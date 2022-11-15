@@ -20,10 +20,10 @@ OBJS_NS_CPP = $(SRC_NS_CPP:%.cc=%-ns.o)
 
 KERNEL=4.14.93-v7+
 # Change to compile against different kernel (can be overridden):
-KERNEL_DIR=/home/asd/rpi/linux
+KERNEL_DIR=/lib/modules/$(shell uname -r)/build
 KERNEL_INC=$(KERNEL_DIR)/include
 
-KERNEL_ARM_DIR=/home/asd/rpi/linux
+KERNEL_ARM_DIR=/lib/modules/$(shell uname -r)/build
 KERNEL_ARM_INC=$(KERNEL_ARM_DIR)/include
 
 # Compiler and options:

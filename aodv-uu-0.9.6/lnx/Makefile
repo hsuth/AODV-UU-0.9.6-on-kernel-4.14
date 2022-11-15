@@ -17,9 +17,9 @@ KOBJS_ARM := $(KOBJS:%.o=%-arm.o)
 KOBJS_MIPS := $(KOBJS:%.o=%-mips.o)
 
 KERNEL=4.14.93-v7+
-KERNEL_DIR=/home/asd/rpi/linux
+KERNEL_DIR=/lib/modules/$(shell uname -r)/build
 KERNEL_INC=$(KERNEL_DIR)/include
-KERNEL_ARM_DIR=/home/asd/rpi/linux
+KERNEL_ARM_DIR=/lib/modules/$(shell uname -r)/build
 KERNEL_ARM_INC=$(KERNEL_ARM_DIR)/include
 
 THIS_DIR=$(shell pwd)
