@@ -330,7 +330,7 @@ int kaodv_proc_info(char *buffer, char **start, off_t offset, int length)
 /*
  * Called when the module is inserted in the kernel.
  */
-static char *ifname[MAX_INTERFACES] = { "eth0" };
+static char *ifname[MAX_INTERFACES] = { "wlan0" };
 
 //#ifdef KERNEL26
 static int num_parms = 0;
