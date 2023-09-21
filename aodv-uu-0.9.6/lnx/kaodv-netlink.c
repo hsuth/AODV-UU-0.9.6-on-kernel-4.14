@@ -216,13 +216,15 @@ static int kaodv_netlink_receive_peer(unsigned char type, void *msg,
 
         ret = kaodv_expl_get(m->dst, &e);
 
-        if (ret > 0)
+        if (ret == 1)
         {
+            printk(KERN_ALERT "KAODVM_ADDROUTE: kaodv_expl_update\n");
             ret = kaodv_expl_update(m->dst, m->nhop, m->time,
                                     m->flags, m->ifindex);
         }
         else
         {
+            printk(KERN_ALERT "KAODVM_ADDROUTE: kaodv_expl_add\n");
             ret = kaodv_expl_add(m->dst, m->nhop, m->time,
                                  m->flags, m->ifindex);
         }
